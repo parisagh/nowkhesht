@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پرونده: برج ناقوس سن جولیانو، جنوا | نوخشت</title>
+<meta name="description" content="ارزیابی لرزه‌ای برج ناقوس سنگی کلیسای سن جولیانو در جنوای ایتالیا: ابر نقاط، مدل‌سازی سه‌بعدی، تحلیل غیرخطی در ANSYS، تحلیل پوش‌اور و پیشنهاد مداخله.">
+<meta property="og:title" content="پرونده: برج ناقوس سن جولیانو، جنوا | نوخشت">
+<meta property="og:description" content="ارزیابی لرزه‌ای برج ناقوس سنگی کلیسای سن جولیانو در جنوای ایتالیا: ابر نقاط، مدل‌سازی سه‌بعدی، تحلیل غیرخطی در ANSYS، تحلیل پوش‌اور و پیشنهاد مداخله.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fa_IR">
+<meta name="theme-color" content="#1A2320">
+<link rel="icon" href="../assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/mark.svg" alt=""><span>نوخشت</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">منو</button>
+    <nav class="nav" id="nav">
+      <a href="../#services">خدمات</a>
+      <a href="../#about">درباره‌ی من</a>
+      <a href="../#projects">پرونده‌ها</a>
+      <a href="../articles/">مقاله‌ها</a>
+      <a class="btn" href="../#consult">درخواست مشاوره</a>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="../">نوخشت</a> / <a href="../#projects">پرونده‌ها</a></p>
+    <span class="eyebrow">پروژه‌ی دانشگاهی · دانشگاه جنوا</span>
+    <h1 style="margin-top:12px;font-size:clamp(34px,5vw,58px)">برج ناقوس سن جولیانو، جنوا</h1>
+    <p>ارزیابی لرزه‌ای یک برج سنگی قرون‌وسطایی در محله‌ی آلبارو، از ابر نقاط تا تحلیل غیرخطی و پیشنهاد مداخله‌ی سازگار با بنای تاریخی.</p>
+  </div>
+</div>
+
+<div class="prose">
+  <div class="callout">این کار در «کارگاه بهسازی سازه» دانشگاه جنوا انجام شد. اعضای گروه: Zahra Sadeghinia، Parisa Ghasemzade و Nazanin Valaei Barhagh. استادان: Chiara Calderini، Antonio Caggiano، Giuseppe Riotto، Chiara Ferrero و Giulio Sacco. نمره‌ی کارگاه: ۳۰ از ۳۰.</div>
+
+  <h2>بنا</h2>
+  <p>کلیسای سن جولیانو در ساحل لیگوریا، دست‌کم از قرن سیزدهم میلادی سابقه دارد. برج ناقوس آن با سنگ سنتی لیگوریایی ساخته شده و بعدها با آجر و اندود ترمیم شده است: پلان مربع، بازشوهای قوسی، طاق‌های متقاطع در طبقات و بامی هشت‌ضلعی با چهار مناره‌ی کوچک در گوشه‌ها.</p>
+
+  <h2>۱. ابر نقاط</h2>
+  <p>کار با ابر نقاط کل مجموعه‌ی کلیسا شروع شد. برج ناقوس از آن جدا شد تا هندسه‌ی واقعی‌اش، با همه‌ی ناهمواری‌های یک بنای چندصدساله، مبنای مدل باشد.</p>
+</div>
+<figure class="wide"><img src="../assets/img/sg-pointcloud.webp" alt="ابر نقاط مجموعه‌ی کلیسای سن جولیانو" loading="lazy" width="1363" height="945"><figcaption class="muted" style="font-size:14px;margin-top:8px">ابر نقاط مجموعه‌ی کلیسا.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>۲. مدل سه‌بعدی</h2>
+  <p>از روی ابر نقاط، مدل سه‌بعدی برج در اتوکد ساخته شد: پلان طبقات، طاق‌های متقاطع (از تقاطع دو طاق آهنگ)، میان‌پرهای طاق‌ها و بام هشت‌ضلعی. جزئیات با ساده‌سازی‌های کنترل‌شده حذف شدند تا مش‌بندی در نرم‌افزار تحلیل دچار خطا نشود.</p>
+</div>
+<figure class="wide"><img src="../assets/img/sg-model.webp" alt="ابر نقاط برج و مدل سه‌بعدی نهایی" loading="lazy" width="1300" height="765"><figcaption class="muted" style="font-size:14px;margin-top:8px">راست: مدل سه‌بعدی نهایی · چپ: ابر نقاط برج.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>۳. تحلیل غیرخطی در ANSYS</h2>
+  <p>برای دیوارها، میان‌پرها و طاق‌ها مشخصات جداگانه تعریف شد و رفتار غیرخطی مصالح بنایی با مدل دراکر-پراگر شبیه‌سازی شد. چون اطلاعات مصالح محدود بود، مقاومت‌ها با ضریب اطمینان کاهش یافتند. مش‌بندی در طاق‌ها ریزتر (۴ سانتی‌متر) و در بدنه درشت‌تر (۲۰ سانتی‌متر) انتخاب شد.</p>
+  <ul>
+    <li>زیر وزن خود، بیشترین تغییر شکل حدود ۷ میلی‌متر بود و تمرکز تنش در محل اتصال میان‌پر به دیوار و طاق دیده شد.</li>
+    <li>در تحلیل لرزه‌ای، شتاب افقی به‌تدریج افزایش یافت. برج تا حدود ۳٫۵ متر بر مجذور ثانیه در جهت X و ۳٫۳ در جهت Y پایدار ماند.</li>
+  </ul>
+</div>
+<figure class="wide"><img src="../assets/img/sg-deformation.webp" alt="تغییر شکل کل برج در تحلیل لرزه‌ای" loading="lazy" width="1500" height="625"><figcaption class="muted" style="font-size:14px;margin-top:8px">تغییر شکل کل برج تحت بار لرزه‌ای در جهت X.</figcaption></figure>
+<figure class="wide"><img src="../assets/img/sg-pushover.webp" alt="منحنی پوش‌اور در جهت X" loading="lazy" width="1500" height="925"><figcaption class="muted" style="font-size:14px;margin-top:8px">منحنی پوش‌اور در جهت X: محور افقی جابه‌جایی نقطه‌ی کنترل (متر)، محور قائم شتاب (متر بر مجذور ثانیه).</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>۴. پیشنهاد مداخله</h2>
+  <p>هدف، تقویت برج بدون از بین بردن رفتار و هویت بنای سنگی بود:</p>
+  <ul>
+    <li><strong>میل‌مهار یا کابل فولادی:</strong> محصورشدگی بیشتر بدون دست بردن در مصالح اصلی.</li>
+    <li><strong>کلاف‌های حلقوی با مصالح برگشت‌پذیر</strong> مثل چوب، فولاد ضدزنگ یا FRP، در چند تراز برج.</li>
+    <li>پرهیز از سخت‌کردن بیش از حد و افزودن بتن مسلح، و استفاده از ملات آهکی به‌جای سیمان.</li>
+  </ul>
+</div>
+
+<div class="prose">
+  <h2>این تجربه برای ساختمان‌های ارومیه</h2>
+  <p>همین روش، یعنی برداشت دقیق، مدل واقعی، تحلیل و کمترین مداخله‌ی لازم، برای بناهای آجری و خشتی ارومیه هم کار می‌کند. هر بنای قدیمی اول باید شناخته شود، بعد تقویت.</p>
+  <p style="margin-top:20px"><a class="btn" href="../#consult">درخواست ارزیابی بنا</a></p>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="../" style="color:var(--paper)"><img src="../assets/img/mark-dark.svg" alt=""><span>نوخشت</span></a>
+    <p class="small">استودیو بهسازی ساختمان · ارومیه · <a href="https://www.linkedin.com/company/nowkhesht/">لینکدین</a> · <span id="year"></span></p>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
