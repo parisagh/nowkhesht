@@ -132,7 +132,7 @@ footer .small{font-size:13px;opacity:.7}
 .wide img{border:1px solid var(--line);background:#fff}
 .callout{background:var(--plaster);border-inline-start:4px solid var(--clay);padding:18px 20px;font-size:15px;margin:24px 0}
 .score{width:100%;border-collapse:collapse;font-size:15px;margin:16px 0 24px}
-.score th,.score td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:right}
+.score th,.score td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:start}
 .score th{color:var(--muted);font-weight:500}
 .score .win{font-weight:700;color:var(--teal)}
 .crumbs{font-size:14px;margin-bottom:16px}
@@ -140,3 +140,10 @@ footer .small{font-size:13px;opacity:.7}
 [hidden]{display:none!important}
 .nav a.btn{color:var(--paper)}
 .nav a.btn:hover{color:var(--paper)}
+.lang{display:flex;gap:4px;align-items:center;font-size:13px;font-weight:700;border-inline-start:1px solid var(--line);padding-inline-start:14px}
+.lang a{color:var(--muted);padding:4px 6px;border-radius:2px;font-size:13px}
+.lang a[aria-current]{color:var(--ink);background:var(--plaster)}
+@media (max-width:820px){.lang{border:0;padding:8px 0 0}}
+html[dir=ltr] body{line-height:1.7}
+html[dir=ltr] h1,html[dir=ltr] h2,html[dir=ltr] h3{line-height:1.2;letter-spacing:.2px}
+html[dir=ltr] .hero p.lead{max-width:40ch}

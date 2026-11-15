@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study: San Giuliano bell tower, Genoa | Nowkhesht</title>
+<meta name="description" content="Seismic assessment of the stone bell tower of the church of San Giuliano in Genoa, Italy: point cloud, 3D modelling, nonlinear analysis in ANSYS, pushover and intervention proposal.">
+<meta property="og:title" content="Case study: San Giuliano bell tower, Genoa | Nowkhesht">
+<meta property="og:description" content="Seismic assessment of the stone bell tower of the church of San Giuliano in Genoa, Italy: point cloud, 3D modelling, nonlinear analysis in ANSYS, pushover and intervention proposal.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://parisagh.github.io/nowkhesht/assets/img/og.jpg">
+<meta name="theme-color" content="#1A2320">
+<link rel="canonical" href="https://parisagh.github.io/nowkhesht/en/projects/san-giuliano.html">
+<link rel="alternate" hreflang="fa" href="https://parisagh.github.io/nowkhesht/projects/san-giuliano.html">
+<link rel="alternate" hreflang="en" href="https://parisagh.github.io/nowkhesht/en/projects/san-giuliano.html">
+<link rel="alternate" hreflang="it" href="https://parisagh.github.io/nowkhesht/it/projects/san-giuliano.html">
+<link rel="alternate" hreflang="x-default" href="https://parisagh.github.io/nowkhesht/projects/san-giuliano.html">
+<link rel="icon" href="../../assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../en/"><img src="../../assets/img/mark.svg" alt=""><span>Nowkhesht</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="../../en/#services">Services</a><a href="../../en/#about">About</a><a href="../../en/#projects">Case studies</a><a href="../../en/services/">Modelling & analysis</a><a href="../../en/articles/">Articles</a>
+      <a class="btn" href="../../en/#consult">Get in touch</a>
+      <span class="lang"><a href="../../projects/san-giuliano.html" hreflang="fa" lang="fa">فا</a><a href="../../en/projects/san-giuliano.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="../../it/projects/san-giuliano.html" hreflang="it" lang="it">IT</a></span>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../en/">Nowkhesht</a> / <a href="../../en/#projects">Case studies</a></p>
+    <span class="eyebrow">University project · University of Genoa</span>
+    <h1 style="margin-top:12px;font-size:clamp(34px,5vw,58px)">San Giuliano bell tower, Genoa</h1>
+    <p>Seismic assessment of a medieval stone tower in the Albaro district, from point cloud to nonlinear analysis and an intervention compatible with a historic building.</p>
+  </div>
+</div>
+
+<div class="prose">
+  <div class="callout">This work was carried out in the Structural Retrofitting workshop at the University of Genoa. Group: Zahra Sadeghinia, Parisa Ghasemzade and Nazanin Valaei Barhagh. Tutors: Chiara Calderini, Antonio Caggiano, Giuseppe Riotto, Chiara Ferrero and Giulio Sacco. Workshop grade: 30/30.</div>
+
+  <h2>The building</h2>
+  <p>The church of San Giuliano, on the Ligurian coast, dates back at least to the 13th century. Its bell tower is built of traditional Ligurian stone, later repaired with brick and render: a square plan, arched openings, cross vaults at each level, and an octagonal roof with four small pinnacles at the corners.</p>
+
+  <h2>1. Point cloud</h2>
+  <p>The work started from a point cloud of the whole church complex. The bell tower was extracted from it so that its real geometry, with all the irregularities of a centuries-old building, became the basis of the model.</p>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-pointcloud.webp" alt="Point cloud of the San Giuliano church complex" loading="lazy" width="1363" height="945"><figcaption class="muted" style="font-size:14px;margin-top:8px">Point cloud of the church complex.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>2. 3D model</h2>
+  <p>From the point cloud, a 3D model of the tower was built in AutoCAD: floor plans, cross vaults (from the intersection of two barrel vaults), vault infills and the octagonal roof. Details were removed through controlled simplifications so that meshing in the analysis software would not fail.</p>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-model.webp" alt="Tower point cloud and final 3D model" loading="lazy" width="1300" height="765"><figcaption class="muted" style="font-size:14px;margin-top:8px">Right: final 3D model · Left: tower point cloud.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>3. Nonlinear analysis in ANSYS</h2>
+  <p>Separate properties were defined for walls, infills and vaults, and the nonlinear behaviour of masonry was simulated with a Drucker–Prager model. Because material data were limited, strengths were reduced by a confidence factor. The mesh was finer in the vaults (4 cm) and coarser in the walls (20 cm).</p>
+  <ul>
+    <li>Under self-weight, the maximum displacement was about 7 mm, with stress concentrations where infills meet walls and vaults.</li>
+    <li>In the seismic analysis, horizontal acceleration was increased step by step. The tower remained stable up to about 3.5 m/s² in X and 3.3 m/s² in Y.</li>
+  </ul>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-deformation.webp" alt="Global deformation of the tower in the seismic analysis" loading="lazy" width="1500" height="625"><figcaption class="muted" style="font-size:14px;margin-top:8px">Global deformation of the tower under seismic load in X.</figcaption></figure>
+<figure class="wide"><img src="../../assets/img/sg-pushover.webp" alt="Pushover curve in X" loading="lazy" width="1500" height="925"><figcaption class="muted" style="font-size:14px;margin-top:8px">Pushover curve in X: horizontal axis control-point displacement (m), vertical axis acceleration (m/s²).</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>4. Intervention proposal</h2>
+  <p>The aim was to strengthen the tower without destroying the behaviour and identity of a stone building:</p>
+  <ul>
+    <li><strong>Steel tie rods or cables:</strong> more confinement without touching the original material.</li>
+    <li><strong>Ring beams in reversible materials</strong> such as timber, stainless steel or FRP, at several levels.</li>
+    <li>Avoiding excessive stiffening and added reinforced concrete, and using lime mortar instead of cement.</li>
+  </ul>
+</div>
+
+<div class="prose">
+  <h2>What this means for buildings in Urmia</h2>
+  <p>The same method, careful survey, a realistic model, analysis and the minimum necessary intervention, works for the brick and adobe buildings of Urmia. Every old building should first be understood, then strengthened.</p>
+  <p style="margin-top:20px"><a class="btn" href="../../en/#consult">Request a building assessment</a></p>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="../../en/" style="color:var(--paper)"><img src="../../assets/img/mark-dark.svg" alt=""><span>Nowkhesht</span></a>
+    <p class="small">Building retrofit studio · Urmia, Iran · <a href="https://www.linkedin.com/company/nowkhesht/">LinkedIn</a> · <span id="year"></span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

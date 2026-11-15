@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caso studio: campanile di San Giuliano, Genova | Nowkhesht</title>
+<meta name="description" content="Valutazione sismica del campanile in pietra della chiesa di San Giuliano a Genova: nuvola di punti, modellazione 3D, analisi non lineare in ANSYS, pushover e proposta di intervento.">
+<meta property="og:title" content="Caso studio: campanile di San Giuliano, Genova | Nowkhesht">
+<meta property="og:description" content="Valutazione sismica del campanile in pietra della chiesa di San Giuliano a Genova: nuvola di punti, modellazione 3D, analisi non lineare in ANSYS, pushover e proposta di intervento.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://parisagh.github.io/nowkhesht/assets/img/og.jpg">
+<meta name="theme-color" content="#1A2320">
+<link rel="canonical" href="https://parisagh.github.io/nowkhesht/it/projects/san-giuliano.html">
+<link rel="alternate" hreflang="fa" href="https://parisagh.github.io/nowkhesht/projects/san-giuliano.html">
+<link rel="alternate" hreflang="en" href="https://parisagh.github.io/nowkhesht/en/projects/san-giuliano.html">
+<link rel="alternate" hreflang="it" href="https://parisagh.github.io/nowkhesht/it/projects/san-giuliano.html">
+<link rel="alternate" hreflang="x-default" href="https://parisagh.github.io/nowkhesht/projects/san-giuliano.html">
+<link rel="icon" href="../../assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../../it/"><img src="../../assets/img/mark.svg" alt=""><span>Nowkhesht</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="../../it/#services">Servizi</a><a href="../../it/#about">Chi sono</a><a href="../../it/#projects">Casi studio</a><a href="../../it/services/">Modellazione e analisi</a><a href="../../it/articles/">Articoli</a>
+      <a class="btn" href="../../it/#consult">Contattami</a>
+      <span class="lang"><a href="../../projects/san-giuliano.html" hreflang="fa" lang="fa">فا</a><a href="../../en/projects/san-giuliano.html" hreflang="en" lang="en">EN</a><a href="../../it/projects/san-giuliano.html" hreflang="it" lang="it" aria-current="true">IT</a></span>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../it/">Nowkhesht</a> / <a href="../../it/#projects">Casi studio</a></p>
+    <span class="eyebrow">Progetto universitario · Università di Genova</span>
+    <h1 style="margin-top:12px;font-size:clamp(34px,5vw,58px)">Campanile di San Giuliano, Genova</h1>
+    <p>Valutazione sismica di una torre medievale in pietra nel quartiere di Albaro, dalla nuvola di punti all'analisi non lineare e a un intervento compatibile con l'edificio storico.</p>
+  </div>
+</div>
+
+<div class="prose">
+  <div class="callout">Questo lavoro è stato svolto nel laboratorio di Structural Retrofitting dell'Università di Genova. Gruppo: Zahra Sadeghinia, Parisa Ghasemzade e Nazanin Valaei Barhagh. Docenti: Chiara Calderini, Antonio Caggiano, Giuseppe Riotto, Chiara Ferrero e Giulio Sacco. Voto del laboratorio: 30/30.</div>
+
+  <h2>L'edificio</h2>
+  <p>La chiesa di San Giuliano, sulla costa ligure, risale almeno al XIII secolo. Il campanile è costruito in pietra tradizionale ligure, poi riparato con mattoni e intonaco: pianta quadrata, aperture ad arco, volte a crociera a ogni livello e copertura ottagonale con quattro piccoli pinnacoli agli angoli.</p>
+
+  <h2>1. Nuvola di punti</h2>
+  <p>Il lavoro è partito dalla nuvola di punti dell'intero complesso. Il campanile è stato estratto, così che la sua geometria reale, con tutte le irregolarità di un edificio secolare, diventasse la base del modello.</p>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-pointcloud.webp" alt="Nuvola di punti del complesso di San Giuliano" loading="lazy" width="1363" height="945"><figcaption class="muted" style="font-size:14px;margin-top:8px">Nuvola di punti del complesso della chiesa.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>2. Modello 3D</h2>
+  <p>Dalla nuvola di punti è stato costruito in AutoCAD il modello 3D della torre: piante dei livelli, volte a crociera (dall'intersezione di due volte a botte), riempimenti delle volte e copertura ottagonale. I dettagli sono stati eliminati con semplificazioni controllate, per evitare errori nella mesh del software di calcolo.</p>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-model.webp" alt="Nuvola di punti della torre e modello 3D finale" loading="lazy" width="1300" height="765"><figcaption class="muted" style="font-size:14px;margin-top:8px">A destra: modello 3D finale · A sinistra: nuvola di punti della torre.</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>3. Analisi non lineare in ANSYS</h2>
+  <p>Sono state definite proprietà distinte per pareti, riempimenti e volte, e il comportamento non lineare della muratura è stato simulato con il modello di Drucker–Prager. Dati i pochi dati sui materiali, le resistenze sono state ridotte con un fattore di confidenza. La mesh è più fitta nelle volte (4 cm) e più rada nelle pareti (20 cm).</p>
+  <ul>
+    <li>Sotto peso proprio lo spostamento massimo è di circa 7 mm, con concentrazioni di tensione dove i riempimenti incontrano pareti e volte.</li>
+    <li>Nell'analisi sismica l'accelerazione orizzontale è stata aumentata per passi. La torre resta stabile fino a circa 3,5 m/s² in X e 3,3 m/s² in Y.</li>
+  </ul>
+</div>
+<figure class="wide"><img src="../../assets/img/sg-deformation.webp" alt="Deformata globale della torre nell'analisi sismica" loading="lazy" width="1500" height="625"><figcaption class="muted" style="font-size:14px;margin-top:8px">Deformata globale della torre sotto azione sismica in X.</figcaption></figure>
+<figure class="wide"><img src="../../assets/img/sg-pushover.webp" alt="Curva pushover in X" loading="lazy" width="1500" height="925"><figcaption class="muted" style="font-size:14px;margin-top:8px">Curva pushover in X: in ascissa lo spostamento del punto di controllo (m), in ordinata l'accelerazione (m/s²).</figcaption></figure>
+
+<div class="prose" style="padding-block:0">
+  <h2>4. Proposta di intervento</h2>
+  <p>L'obiettivo era rinforzare la torre senza snaturare il comportamento e l'identità di un edificio in pietra:</p>
+  <ul>
+    <li><strong>Tiranti o cavi in acciaio:</strong> più confinamento senza toccare il materiale originale.</li>
+    <li><strong>Cerchiature in materiali reversibili</strong> come legno, acciaio inox o FRP, a più livelli.</li>
+    <li>Evitare irrigidimenti eccessivi e aggiunte in calcestruzzo armato, e usare malta di calce invece del cemento.</li>
+  </ul>
+</div>
+
+<div class="prose">
+  <h2>Cosa significa per gli edifici di Urmia</h2>
+  <p>Lo stesso metodo, rilievo accurato, modello realistico, analisi e minimo intervento necessario, funziona per gli edifici in mattoni e in terra cruda di Urmia. Ogni edificio antico va prima conosciuto, poi rinforzato.</p>
+  <p style="margin-top:20px"><a class="btn" href="../../it/#consult">Richiedi una valutazione dell'edificio</a></p>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="../../it/" style="color:var(--paper)"><img src="../../assets/img/mark-dark.svg" alt=""><span>Nowkhesht</span></a>
+    <p class="small">Studio di riqualificazione edilizia · Urmia, Iran · <a href="https://www.linkedin.com/company/nowkhesht/">LinkedIn</a> · <span id="year"></span></p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

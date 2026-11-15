@@ -17,8 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
   }
 
+  const LANG = document.documentElement.lang || "fa";
+  const T = {
+    fa: { title: "درخواست مشاوره از سایت نوخشت", subject: "درخواست مشاوره", soon: "راه‌های تماس به‌زودی اضافه می‌شوند.", copied: "متن درخواست کپی شد. در تلگرام آن را بچسبانید و بفرستید.", locale: "fa-IR" },
+    en: { title: "Consultation request from the Nowkhesht website", subject: "Consultation request", soon: "Contact options coming soon.", copied: "Message copied. Paste it in Telegram and send.", locale: "en-GB" },
+    it: { title: "Richiesta di consulenza dal sito Nowkhesht", subject: "Richiesta di consulenza", soon: "Contatti in arrivo.", copied: "Messaggio copiato. Incollalo su Telegram e invialo.", locale: "it-IT" }
+  }[LANG] || {};
   const y = document.getElementById("year");
-  if (y) y.textContent = new Intl.DateTimeFormat("fa-IR", { year: "numeric" }).format(new Date());
+  if (y) y.textContent = new Intl.DateTimeFormat(T.locale, { year: "numeric" }).format(new Date());
 
   const form = document.getElementById("consult-form");
   if (!form) return;
@@ -26,21 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = form.querySelectorAll("[data-channel]");
   buttons.forEach(b => { if (!CONTACT[b.dataset.channel]) b.hidden = true; });
   if (![...buttons].some(b => !b.hidden)) {
-    msg.textContent = "راه‌های تماس به‌زودی اضافه می‌شوند.";
+    msg.textContent = T.soon;
     msg.classList.add("show");
   }
 
   const compose = () => {
-    const d = new FormData(form);
-    return [
-      "درخواست مشاوره از سایت نوخشت",
-      "نام: " + (d.get("name") || ""),
-      "تلفن: " + (d.get("phone") || ""),
-      "نوع ساختمان: " + (d.get("type") || ""),
-      "سال ساخت تقریبی: " + (d.get("year") || ""),
-      "موضوع: " + (d.get("topic") || ""),
-      "توضیح: " + (d.get("details") || "")
-    ].join("\n");
+    const lines = [T.title];
+    form.querySelectorAll("input, select, textarea").forEach(el => {
+      const lab = el.closest("label");
+      const name = lab ? (lab.childNodes[0].textContent || "").trim() : el.name;
+      lines.push(name + ": " + (el.value || ""));
+    });
+    return lines.join("\n");
   };
 
   buttons.forEach(b => b.addEventListener("click", e => {
@@ -52,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (b.dataset.channel === "telegram") {
       navigator.clipboard?.writeText(compose()).catch(() => {});
       url = "https://t.me/" + CONTACT.telegram;
-      msg.textContent = "متن درخواست کپی شد. در تلگرام آن را بچسبانید و بفرستید.";
+      msg.textContent = T.copied;
       msg.classList.add("show");
     }
-    if (b.dataset.channel === "email") url = "mailto:" + CONTACT.email + "?subject=" + encodeURIComponent("درخواست مشاوره") + "&body=" + text;
+    if (b.dataset.channel === "email") url = "mailto:" + CONTACT.email + "?subject=" + encodeURIComponent(T.subject) + "&body=" + text;
     window.open(url, "_blank", "noopener");
   }));
   form.addEventListener("submit", e => e.preventDefault());
